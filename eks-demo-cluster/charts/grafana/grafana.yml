@@ -10,7 +10,7 @@ spec:
   releaseName: grafana
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
-    name: stable/grafana
+    name: grafana
     version: 3.8.10
   values:
     persistence.enabled: true

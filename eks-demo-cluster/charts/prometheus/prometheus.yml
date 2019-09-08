@@ -10,5 +10,5 @@ spec:
   releaseName: prometheus
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
-    name: stable/prometheus
+    name: prometheus
     version: 9.1.0
