@@ -9,6 +9,7 @@ metadata:
 spec:
   releaseName: efs-provisioner
   chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
     name: stable/efs-provisioner
     version: 0.7.0
   values:
