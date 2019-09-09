@@ -14,6 +14,7 @@ spec:
     version: 3.8.10
   values:
     persistence.enabled: "true"
+    persistence.storageClassName: "efs"
     admin.password: "mysecret"
     datasources."datasources\.yaml".apiVersion: 1
     datasources."datasources\.yaml".datasources[0].name: Prometheus
