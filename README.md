@@ -3,7 +3,8 @@
 ![Deployment Pipeline](docs/_files/flux-cd-diagram.png)
 
 ```
-kubectl delete storageclass gp2 #eks ships with gp2 on and default
+# eks ships with gp2 on and default
+kubectl delete storageclass gp2
 ```
 ```
 # ensure Helm is installed/configured
