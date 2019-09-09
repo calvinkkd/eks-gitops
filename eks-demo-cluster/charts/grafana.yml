@@ -17,7 +17,7 @@ spec:
         enabled: true
     persistence.storageClassName: efs
     admin.password: "mysecret"
-    datasources: {}
+    datasources: 
        datasources.yaml:
             apiVersion: 1
             datasources:
