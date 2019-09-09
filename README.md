@@ -1,5 +1,6 @@
 # eks-gitops
 
+![Deployment Pipeline](images/flux-cd-diagram.png)
 
 ```
 kubectl delete storageclass gp2 #eks ships with gp2 on and default
