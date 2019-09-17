@@ -24,6 +24,12 @@ sudo chmod +x /usr/local/bin/fluxctl
 helm repo add fluxcd https://charts.fluxcd.io
 kubectl apply -f https://raw.githubusercontent.com/fluxcd/flux/helm-0.10.1/deploy-helm/flux-helm-release-crd.yaml
 ```
+
+in one big top window:
+```
+watch -d "kubectl get deployments --all-namespaces; kubectl get deployments --all-namespaces | wc -l"
+```
+
 ```
 # Install flux, and configure it to pull from our repo
 helm install --name flux \
