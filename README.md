@@ -60,3 +60,4 @@ fluxctl list-workloads --k8s-fwd-ns flux
 # Fix grafana (if necessary)
 helm upgrade --reuse-values --set persistence.enabled=true grafana stable/grafana
 ```
+
