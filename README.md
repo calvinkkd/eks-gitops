@@ -9,7 +9,7 @@ kubectl delete storageclass gp2
 ```
 # ensure Helm is installed/configured
 cd ~/environment/
-kubectl apply -f ~/environment/rbac.yaml
+kubectl apply -f ~/environment/magic-infra-automation/helm-rbac/rbac.yaml 
 helm init --service-account tiller
 ```
 ```
@@ -31,6 +31,10 @@ helm install --name flux \
 --set helmOperator.create=true \
 --set helmOperator.createCRD=false \
 --set git.url=git@github.com:brentlangston/eks-gitops \
+--set git.path="k8s/common\,k8s/cluster-name" \
+--set git.label=cluster-name \
+--set prometheus.enabled=true \
+--set syncGarbageCollection.enabled=true \
 --namespace flux \
 fluxcd/flux
 
