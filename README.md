@@ -31,7 +31,7 @@ helm install --name flux \
 --set helmOperator.create=true \
 --set helmOperator.createCRD=false \
 --set git.url=git@github.com:brentlangston/eks-gitops \
---set git.path="k8s/common\,k8s/cluster-name" \
+--set git.path="common\,brents-test" \
 --set git.label=cluster-name \
 --set prometheus.enabled=true \
 --set syncGarbageCollection.enabled=true \
