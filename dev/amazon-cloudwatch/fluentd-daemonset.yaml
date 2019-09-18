@@ -33,7 +33,7 @@ spec:
         command: ['sh', '-c', '']
       containers:
       - name: fluentd-cloudwatch
-        image: fluent/fluentd-kubernetes-daemonset:v1-debian-syslog
+        image: fluent/fluentd-kubernetes-daemonset:v1-debian-cloudwatch
         env:
         - name: REGION
           valueFrom:
