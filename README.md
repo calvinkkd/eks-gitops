@@ -3,12 +3,11 @@
 ![Deployment Pipeline](docs/_files/flux-cd-diagram.png)
 
 ```
-# eks ships with gp2 on and default
-kubectl delete storageclass gp2
-```
-```
 # ensure Helm is installed/configured
-cd ~/environment/
+cd ~/environment
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod +x get_helm.sh
+./get_helm.sh
 kubectl apply -f ~/environment/magic-infra-automation/helm-rbac/rbac.yaml 
 helm init --service-account tiller
 ```
@@ -27,7 +26,7 @@ kubectl apply -f https://raw.githubusercontent.com/fluxcd/flux/helm-0.10.1/deplo
 
 in one big top window:
 ```
-watch -d "kubectl get deployments --all-namespaces; kubectl get deployments --all-namespaces | wc -l"
+watch "kubectl get all --all-namespaces"
 ```
 
 ```
@@ -36,9 +35,10 @@ helm install --name flux \
 --set rbac.create=true \
 --set helmOperator.create=true \
 --set helmOperator.createCRD=false \
---set git.url=git@github.com:brentlangston/eks-gitops \
---set git.path="common\,brents-test" \
+--set git.url=git@github.com:brentley/eks-gitops \
+--set git.path="common\,dev" \
 --set git.label=cluster-name \
+--set git.branch=master \
 --set prometheus.enabled=true \
 --set syncGarbageCollection.enabled=true \
 --namespace flux \
