@@ -75,7 +75,7 @@ watch kubectl -n flux get pods
 fluxctl --k8s-fwd-ns flux identity
 
 # paste as deploy key w/write access:
-https://github.com/brentlangston/eks-gitops/settings/keys
+https://github.com/brentley/eks-gitops/settings/keys
 ```
 ```
 # Trigger a sync (optional)
