@@ -45,6 +45,7 @@ sudo chmod +x /usr/local/bin/fluxctl
 # Add the Flux helm repo and apply the flux CRDs
 helm repo add fluxcd https://charts.fluxcd.io
 kubectl apply -f https://raw.githubusercontent.com/fluxcd/flux/helm-0.10.1/deploy-helm/flux-helm-release-crd.yaml
+
 ```
 
 in one big top window:
