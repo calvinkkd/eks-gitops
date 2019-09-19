@@ -12,9 +12,10 @@ metadata:
     app: helloworld-ingress
 spec:
   rules:
-    - http:
+    - host: helloworld.dev.intranet.local
+      http:
         paths:
-          - path: /hello/*
+          - path: /*
             backend:
               serviceName: helloworld
               servicePort: 80

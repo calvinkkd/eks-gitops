@@ -12,10 +12,9 @@ metadata:
     app: 2048-ingress
 spec:
   rules:
-    - host: 2048.dev.intranet.local
-      http:
+    - http:
         paths:
-          - path: /*
+          - path: /2048/*
             backend:
               serviceName: service-2048
               servicePort: 80
