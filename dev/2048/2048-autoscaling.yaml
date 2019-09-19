@@ -2,7 +2,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: 2048-deployment
-  namespace: 2048-game
+  namespace: default
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
